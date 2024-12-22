@@ -331,91 +331,91 @@
 		"tag": "奈飞域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/netflix.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/netflix.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "OpenAI域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/openai.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/openai.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "GeMini域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-gemini.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-gemini.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "GitHub域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/github.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/github.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "电报域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/telegram.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/telegram.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "谷歌域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "谷歌中国域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-cn.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-cn.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "苹果域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "苹果中国域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple-cn.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple-cn.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "微软域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "微软中国域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft%40cn.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft%40cn.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "国内域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/cn.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/cn.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "国外域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/geolocation-!cn.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/geolocation-!cn.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
@@ -429,28 +429,28 @@
 		"tag": "电报IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/telegram.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/telegram.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "谷歌IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/google.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/google.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "苹果IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.srs",
 		"download_detour": "🚀 节点选择"
 	  },
 	  {
 		"tag": "国内IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/cn.json",
+		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/cn.srs",
 		"download_detour": "🚀 节点选择"
 	  }
 	]
