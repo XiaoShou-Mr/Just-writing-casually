@@ -8,7 +8,7 @@
 	  "external_controller": "127.0.0.1:9090",
 	  "external_ui": "Yacd_meta",
 	  "secret": "",
-	  "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip",
+	  "external_ui_download_url": "https://ghproxy.cn/https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip",
 	  "external_ui_download_detour": "🎯 全球直连",
 	  "default_mode": "rule"
 	},
@@ -324,134 +324,134 @@
 		"tag": "油管域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/youtube.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/youtube.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "奈飞域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/netflix.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/netflix.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "OpenAI域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/openai.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/openai.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "GeMini域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-gemini.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-gemini.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "GitHub域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/github.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/github.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "电报域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/telegram.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/telegram.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "谷歌域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "谷歌中国域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-cn.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-cn.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "苹果域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "苹果中国域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple-cn.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple-cn.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "微软域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "微软中国域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft%40cn.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft%40cn.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "国内域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/cn.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/cn.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "国外域名",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/geolocation-!cn.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/geolocation-!cn.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "奈飞IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/netflix.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/netflix.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "电报IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/telegram.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/telegram.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "谷歌IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/google.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/google.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "苹果IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.srs",
+		"download_detour": "🎯 全球直连"
 	  },
 	  {
 		"tag": "国内IP",
 		"type": "remote",
 		"format": "binary",
-		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/cn.srs",
-		"download_detour": "🚀 节点选择"
+		"url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/cn.srs",
+		"download_detour": "🎯 全球直连"
 	  }
 	]
   }
