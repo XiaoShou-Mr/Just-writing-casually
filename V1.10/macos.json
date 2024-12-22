@@ -1,90 +1,90 @@
-{ // =-= TUN模式、创建国外默认和国内默认两种模式 上海IP: 106.14.228.194  河北IP: 60.6.241.125
-  "log": { // =-= 日志模块默认就好
-	"level": "info", // =-= 日志等级
-	"timestamp": true // =-= 是否添加时间戳
+{
+  "log": {
+	"level": "info",
+	"timestamp": true
   },
-  "experimental": { // =-= 实验性模块
-	"clash_api": { // =-= Clash面板
-	  "external_controller": "127.0.0.1:9090", // =-= 0.0.0.0所有ip可访问 127.0.0.1只有本机访问
-	  "external_ui": "Yacd_meta", // =-= 下载UI的保存路径
-	  "secret": "", // =-= 密钥(可选)本地为空就好
-	  "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip", // =-= UI的下载地址使用Yacd-meta
-	  "external_ui_download_detour": "🎯 全球直连", // =-= 出站的节点
-	  "default_mode": "rule" // =-= Clash中的默认模式 使用rule规则模式
+  "experimental": {
+	"clash_api": {
+	  "external_controller": "127.0.0.1:9090",
+	  "external_ui": "Yacd_meta",
+	  "secret": "",
+	  "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip",
+	  "external_ui_download_detour": "🎯 全球直连",
+	  "default_mode": "rule"
 	},
-	"cache_file": { // =-= 缓存模块
-	  "enabled": true, // =-= 启用缓存文件
-	  "store_fakeip": false // =-= 将fakeip存储在缓存文件中
+	"cache_file": {
+	  "enabled": true,
+	  "store_fakeip": false
 	}
   },
-  "dns": {// =-= DNS模块 DOH: https://8.8.8.8/dns-query DOT: tls://8.8.8.8
+  "dns": {
 	"servers": [
 	  {
-		"tag": "proxyDns", // =-= 国外DNS标签
-		"address": "https://8.8.8.8/dns-query", // =-= DNS服务器 DOH:https://8.8.8.8/dns-query DOT:tls://8.8.8.8
-		"detour": "🚀 节点选择", // =-= 出站的标签
-		"client_subnet": "106.14.228.194"  // =-= DNS查询加速
+		"tag": "proxyDns",
+		"address": "https://8.8.8.8/dns-query",
+		"detour": "🚀 节点选择",
+		"client_subnet": "106.14.228.194"
 	  },
 	  {
-		"tag": "localDns", // =-= 国内DNS标签
-		"address": "https://223.5.5.5/dns-query", // =-= DNS服务器
-		"detour": "🎯 全球直连" // =-= 出站的标签
+		"tag": "localDns",
+		"address": "https://223.5.5.5/dns-query",
+		"detour": "🎯 全球直连"
 	  },
 	],
 	"rules": [
 	  {
-		"outbound": "any", // =-= 节点服务器用于节点服务器解析
-		"server": "localDns", // =-= 使用的DNS标签
-		"disable_cache": true // =-= 1.11.0 已弃用
+		"outbound": "any",
+		"server": "localDns",
+		"disable_cache": true
 	  },
 	  {
-		"clash_mode": "direct", // =-= Clash直连模式DNS
-		"server": "localDns" // =-= 使用的DNS标签
+		"clash_mode": "direct",
+		"server": "localDns"
 	  },
 	  {
-		"clash_mode": "global", // =-= Clash全局模式DNS
-		"server": "proxyDns" // =-= 使用的DNS标签
+		"clash_mode": "global",
+		"server": "proxyDns"
 	  },
 	  {
-		"rule_set": "国内域名", // =-= 国内域名规则
-		"server": "localDns"// =-= 使用的DNS标签
+		"rule_set": "国内域名",
+		"server": "localDns"
 	  },
 	  {
-		"rule_set": ["苹果域名", "苹果中国域名"], // =-= 苹果域名规则
-		"server": "localDns"// =-= 使用的DNS标签
+		"rule_set": ["苹果域名", "苹果中国域名"],
+		"server": "localDns"
 	  },
 	  {
-		"rule_set": ["微软域名", "微软中国域名"], // =-= 微软域名规则
-		"server": "localDns"// =-= 使用的DNS标签
+		"rule_set": ["微软域名", "微软中国域名"],
+		"server": "localDns"
 	  }
 	],
-	"final": "proxyDns", // =-= 默认DNS服务器
-	"strategy": "ipv4_only" // =-= 默认解析域名策略 ipv4_only ipv6_only
+	"final": "proxyDns",
+	"strategy": "ipv4_only"
   },
-  "inbounds": [ // =-= 入站模块
+  "inbounds": [
 	{
-	  "type": "tun", // =-= Tun模式
-	  "address": "172.19.0.1/30", // =-= Tun接口前缀
-	  "mtu": 9000, // =-= 最大传输单元
-	  "auto_route": true, // =-= 设置到Tun的默认路由
-	  "strict_route": true, // =-= 启用auto_route时执行严格的路由规则
-	  "sniff": true, // =-= 域名嗅探 1.11.0弃用
-	  "endpoint_independent_nat": false, // =-= 启用独立于端点的NAT
-	  "stack": "system", // =-= Tun的协议栈
-	  "platform": { // =-= 平台特定的设置，由客户端应用提供。
-		"http_proxy": { // =-= 系统HTTP代理设置
-		  "enabled": true, // =-= 启用系统HTTP代理
-		  "server": "127.0.0.1", // =-= 系统HTTP代理服务器地址
-		  "server_port": 2080 // =-= 系统 HTTP 代理服务器端口
+	  "type": "tun",
+	  "address": "172.19.0.1/30",
+	  "mtu": 9000,
+	  "auto_route": true,
+	  "strict_route": true,
+	  "sniff": true,
+	  "endpoint_independent_nat": false,
+	  "stack": "system",
+	  "platform": {
+		"http_proxy": {
+		  "enabled": true,
+		  "server": "127.0.0.1",
+		  "server_port": 2080
 		}
 	  }
 	},
 	{
-	  "type": "mixed", // =-= mixed协议栈模式
-	  "listen": "127.0.0.1", // =-= 监听地址
-	  "listen_port": 2080, // =-= 监听端口
-	  "sniff": true, // =-= 域名嗅探 1.11.0弃用
-	  "users": [] // =-= SOCKS和HTTP用户 如果为空则不需要验证
+	  "type": "mixed",
+	  "listen": "127.0.0.1",
+	  "listen_port": 2080,
+	  "sniff": true,
+	  "users": []
 	}
   ],
   "outbounds": [
@@ -315,118 +315,118 @@
 		"outbound": "Ⓜ️ 微软服务"
 	  }
 	],
-	"rule_set": [ // =-= 规则集模块
+	"rule_set": [
 	  {
-		"tag": "油管域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "油管域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/youtube.srs",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "奈飞域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "奈飞域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/netflix.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "OpenAI域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "OpenAI域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/openai.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "GeMini域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "GeMini域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-gemini.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "GitHub域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "GitHub域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/github.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "电报域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "电报域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/telegram.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "谷歌域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "谷歌域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "谷歌中国域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "谷歌中国域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/google-cn.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "苹果域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "苹果域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "苹果中国域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "苹果中国域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/apple-cn.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "微软域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "微软域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "微软中国域名", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "微软中国域名",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geosite/microsoft%40cn.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "奈飞IP", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "奈飞IP",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/netflix.srs",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "电报IP", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "电报IP",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/telegram.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "谷歌IP", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "谷歌IP",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo/geoip/google.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  },
 	  {
-		"tag": "苹果IP", // =-= 规则标签
-		"type": "remote", // =-= 规则集类型 local=本地 remote=远程
-		"format": "binary", // =-= 规则集格式， source或binary
+		"tag": "苹果IP",
+		"type": "remote",
+		"format": "binary",
 		"url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/sing/geo-lite/geoip/apple.json",
-		"download_detour": "🚀 节点选择" // =-= 下载规则的节点
+		"download_detour": "🚀 节点选择"
 	  }
 	]
   }
