@@ -8,3 +8,10 @@ production-openaicom-storage.azureedge.net
 +.oaiusercontent.com
 +.openai.com
 +.sora.com
++.chatgpt.livekit.cloud
++.host.livekit.cloud
++.turn.livekit.cloud
++.openai.com.cdn.cloudflare.net
+o33249.ingest.sentry.io
+openaicom.imgix.net
+browser-intake-datadoghq.com
