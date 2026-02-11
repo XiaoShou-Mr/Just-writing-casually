@@ -1,0 +1,4 @@
+DOMAIN-REGEX,^.*pp\d+[a-z]*\.cc$
+DOMAIN-REGEX,^.*31xx\d+[a-z]*\.cc$
+DOMAIN-REGEX,^.*jiuse[1-9]\.cloud$
+DOMAIN-REGEX,^.*javonline\d{4}\.top$
